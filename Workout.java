@@ -6,6 +6,22 @@ public class Workout {
        private int caloriesBurned;
        private WorkoutType type;
 
+    public Workout(LocalDate date, int durationMinutes, int caloriesBurned, WorkoutType type) {
+        this.date = date;
+        this.durationMinutes = durationMinutes;
+        this.caloriesBurned = caloriesBurned;
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Date: " + date +
+                " | Training duration: " + durationMinutes + " min" +
+                " | Burned calories: " + caloriesBurned +
+                " | Workout type: " + type;
+    }
+
+
     public LocalDate getDate() {
         return date;
     }
